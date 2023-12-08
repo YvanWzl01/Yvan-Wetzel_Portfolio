@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <h1>Yvan Wetzel</h1>
+            <nav>
+                <ul style="list-style-type:none">
+                    <a href="about.html" style="text-decoration:none"><li>About</li></a>
+                    <a href="contact.html" style="text-decoration:none"><li>Contact</li></a>
+                    <a href="index.html" style="text-decoration:none"><li>Projects</li></a>
+                </ul>
+            </nav>
+    </header>
+    
+<main>
+
+<form action="#">
+    <legend>Personal informations</legend> 
+
+    <div>
+      <label for="civility">civility</label>
+      <label for="Woman" class="civility">female</label>
+      <input id="Woman" type="radio" name="sexe" required> <!-- required : input must be completed to validate the form -->
+      <label for="Man" class="civility">male</label> 
+      <input id="Man" type="radio" name="sexe" required>
+    </div><!-- display same name in input for the radio type -->
+
+    <div class="form">
+      <label for="name">firstname</label> 
+      <input id="name" type="text" placeholder="Complete this field" required> 
+    </div>
+
+    <div class="form">
+      <label for="lastname">lastname</label>
+      <input id="lastname" type="text" placeholder="Complete this field" required>
+    </div>
+
+    <div class="form">
+      <label for="email">email</label> 
+      <input id="email" type="email" placeholder="Complete this field" required>
+    </div>
+
+    <div class="form">
+      <label for="telephone">phone number</label> 
+      <input id="telephone" type="tel" placeholder="Complete this field" required>
+    </div>
+     
+    <legend>Message</legend> 
+
+    <div class="form">
+      <label for="pro">subject</label>
+      <input id="pro" type="pro" placeholder="Complete this field" required>
+    </div>
+
+   <div class="form">
+    <label for="date">current date</label> 
+    <input id="date" type="date" required>
+   </div>
+   
+   <div class="form">
+    <label for="content">content</label>
+    <textarea name="contenu" id="content"></textarea required>
+   </div>
+
+   <div>
+    <input class="button" type="submit" value="SEND IT">
+   </div>
+</form>
+
+
+</main>
+</body>
+<script>
+  function Verifier_formulaire(formulaire){
+    if (formulaire.champs_obligatoire.value==""){
+      alert ("Vous avez oublié de remplir le champs obligatoire");
+    }else{
+      alert ("Le champs obligatoire est bien rempli, on soumet le formulaire");
+      formulaire.submit();
+    }
+  }
+  </script> 
+</html>
